@@ -10,8 +10,8 @@ $(function () {
   // useful when saving the description in local storage?
   //
   var savebtn = $(".saveBtn");
-  savebtn.on('click', function (event) {
-    var myparent = $(this.parentNode); 
+  savebtn.on('click', function () {
+    var myparent = $(this).parent(); 
     var parentid = myparent.attr('id');
     var textarea = myparent.children('.description');
     var userinput = textarea.val();
