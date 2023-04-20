@@ -3,6 +3,15 @@
 // in the html.
 $(function () {
   // TODO: Add a listener for click events on the save button. This code should
+  var savebtn = $(".saveBtn");
+  savebtn.on('click', function (event) {
+    var myparent = $(this.parentNode); 
+    var parentid = myparent.attr('id');
+    var button = $(this)
+    var textarea = myparent.children('.description');
+    var userinput = textarea.val()
+    localStorage.setItem(parentid, userinput);
+  })
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
   // function? How can DOM traversal be used to get the "hour-x" id of the
